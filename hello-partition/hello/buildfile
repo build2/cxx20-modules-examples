@@ -1,0 +1,8 @@
+exe{hello}: {mxx cxx}{**}
+{
+  test = true
+}
+
+# An example of a manual module name specification.
+#
+mxx{hello-printer}@./: cxx.module_name = hello:print

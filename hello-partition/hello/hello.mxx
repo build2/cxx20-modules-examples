@@ -1,0 +1,20 @@
+export module hello;
+
+//import <string_view>;
+
+/*
+module;
+
+#include <string_view>
+
+export module hello;
+*/
+
+export import :format;
+
+export namespace hello
+{
+  void
+  //say_hello (const std::string_view& name);
+  say_hello (const char* name);
+}

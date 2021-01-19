@@ -1,2 +1,4 @@
 : 1
 location: hello-module/
+:
+location: hello-partition/
