@@ -1,0 +1,4 @@
+exe{hello}: {mxx cxx}{**}
+{
+  test = true
+}
