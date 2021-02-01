@@ -2,6 +2,8 @@
 
 C++20 header include translation example.
 
+Examples of builds with various levels of include translation:
+
 ```
 b config.cxx.translate_include=all-importable
 b config.cxx.translate_include=std-importable

@@ -1,7 +1,8 @@
 # C++20 Header Importation/Translation Library Example
 
-C++20 header library example. Note that `libhello-format-header` is a
-header-only (or *binless*, in `build2` terminology) library.
+C++20 header importation/translation library example. Note that
+`libhello-format-header` is a header-only (or *binless*, in `build2`
+terminology) library.
 
 Example of a development build:
 
