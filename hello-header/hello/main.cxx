@@ -1,6 +1,7 @@
 import <hello/hello.hxx>;
 
-int main ()
+int
+main ()
 {
   hello::say_hello ("World");
 }

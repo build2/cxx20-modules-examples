@@ -1,6 +1,7 @@
 import hello;
 
-int main ()
+int
+main ()
 {
   hello::say_hello ("World");
 }
