@@ -1,0 +1,35 @@
+intf_libs = # Interface dependencies.
+impl_libs = # Implementation dependencies.
+import intf_libs += libhello-format-module%lib{hello-format}
+
+lib{hello}: {mxx cxx}{**} $impl_libs $intf_libs
+
+# Build options.
+#
+{bmia obja}{*}: cxx.poptions += -DLIBHELLO_STATIC_BUILD
+{bmis objs}{*}: cxx.poptions += -DLIBHELLO_SHARED_BUILD
+
+# Export options.
+#
+lib{hello}:
+{
+  cxx.export.libs = $intf_libs
+}
+
+# For pre-releases use the complete version to make sure they cannot be used
+# in place of another pre-release or the final version. See the version module
+# for details on the version.* variable values.
+#
+if $version.pre_release
+  lib{hello}: bin.lib.version = @"-$version.project_id"
+else
+  lib{hello}: bin.lib.version = @"-$version.major.$version.minor"
+
+# Install into the libhello/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+mxx{*}:
+{
+  install         = include/libhello/
+  install.subdirs = true
+}

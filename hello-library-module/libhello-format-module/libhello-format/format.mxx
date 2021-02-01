@@ -1,0 +1,16 @@
+module;
+
+#include <string>
+///#include <string_view>
+
+export module hello.format;
+
+export namespace hello
+{
+  std::string
+  ///format_hello (const std::string_view& n)
+  format_hello (const std::string& n)
+  {
+    return "Hello, " + std::string (n) + '!';
+  }
+}

@@ -1,0 +1,19 @@
+module;
+
+#include <iosfwd>
+///#include <string_view>
+#include <string>
+
+export module hello;
+
+export import :check;
+import hello.format;
+
+export namespace hello
+{
+  void
+  ///say_hello (std::ostream&, const std::string_view& name);
+  say_hello (std::ostream&, const std::string& /*name*/);
+
+  using hello::format_hello; // Re-export.
+}

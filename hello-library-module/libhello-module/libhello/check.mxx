@@ -1,0 +1,16 @@
+module;
+
+///#include <string_view>
+
+export module hello:check;
+
+export namespace hello
+{
+  inline bool
+  ///check_hello (const std::string_view& name)
+  check_hello (const char* name)
+  {
+    ///return !name.empty ();
+    return *name != '\0';
+  }
+}

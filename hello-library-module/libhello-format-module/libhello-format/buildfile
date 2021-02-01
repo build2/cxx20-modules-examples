@@ -1,0 +1,13 @@
+lib{hello-format}: mxx{**}
+{
+  bin.binless = true
+}
+
+# Install into the libhello-format/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+mxx{*}:
+{
+  install         = include/libhello-format/
+  install.subdirs = true
+}
