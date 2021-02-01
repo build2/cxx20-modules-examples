@@ -1,0 +1,8 @@
+exe{hello}: {hxx cxx}{**}
+{
+  test = true
+}
+
+hxx{*}: cxx.importable = true
+
+cxx.poptions =+ "-I$out_root" "-I$src_root"
