@@ -1,8 +1,8 @@
 : 1
-name: hello-header
+name: hello-header-import
 version: 0.1.0-a.0.z
 project: cxx20-modules-examples
-summary: C++20 header unit example
+summary: C++20 header unit importation example
 license: MIT
 description-file: README.md
 url: https://github.com/build2/cxx20-modules-examples

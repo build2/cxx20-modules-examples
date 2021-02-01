@@ -1,4 +1,4 @@
-project = hello-header
+project = hello-header-import
 
 using version
 using config
