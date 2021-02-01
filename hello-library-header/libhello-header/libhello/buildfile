@@ -29,9 +29,9 @@ libs{hello}: cxx.export.poptions += -DLIBHELLO_SHARED
 # for details on the version.* variable values.
 #
 if $version.pre_release
-  lib{hello}: bin.lib.version = @"-$version.project_id"
+  lib{hello}: bin.lib.version = "-$version.project_id"
 else
-  lib{hello}: bin.lib.version = @"-$version.major.$version.minor"
+  lib{hello}: bin.lib.version = "-$version.major.$version.minor"
 
 # Install into the libhello/ subdirectory of, say, /usr/include/
 # recreating subdirectories.
