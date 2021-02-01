@@ -1,0 +1,17 @@
+cxx.std = experimental
+cxx.features.modules = true
+
+using cxx
+
+assert $cxx.features.modules "no modules support for $cxx.signature"
+
+hxx{*}: extension = hxx
+cxx{*}: extension = cxx
+
+# Every exe{} in this subproject is by default a test.
+#
+exe{*}: test = true
+
+# The test target for cross-testing (running tests under Wine, etc).
+#
+test.target = $cxx.target

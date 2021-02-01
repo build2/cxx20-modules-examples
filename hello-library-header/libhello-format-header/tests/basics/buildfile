@@ -1,0 +1,3 @@
+import libs = libhello-format-header%lib{hello-format}
+
+exe{driver}: cxx{**} $libs

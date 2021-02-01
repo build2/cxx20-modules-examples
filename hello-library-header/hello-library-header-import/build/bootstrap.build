@@ -1,0 +1,7 @@
+project = hello-library-header-import
+
+using version
+using config
+using test
+using install
+using dist

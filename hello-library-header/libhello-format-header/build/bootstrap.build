@@ -1,0 +1,7 @@
+project = libhello-format-header
+
+using version
+using config
+using test
+using install
+using dist

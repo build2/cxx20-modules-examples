@@ -1,0 +1,19 @@
+lib{hello-format}: hxx{**}
+
+hxx{*}: cxx.importable = true
+
+# Export options.
+#
+lib{hello-format}:
+{
+  cxx.export.poptions = "-I$out_root" "-I$src_root"
+}
+
+# Install into the libhello-format/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+hxx{*}:
+{
+  install         = include/libhello-format/
+  install.subdirs = true
+}
