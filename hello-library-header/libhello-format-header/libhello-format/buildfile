@@ -1,7 +1,5 @@
 lib{hello-format}: hxx{**}
 
-hxx{*}: cxx.importable = true
-
 # Export options.
 #
 lib{hello-format}:

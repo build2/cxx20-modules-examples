@@ -4,7 +4,7 @@ import intf_libs += libhello-format-header%lib{hello-format}
 
 lib{hello}: {hxx cxx}{**} $impl_libs $intf_libs
 
-hxx{*}: cxx.importable = true
+hxx{export}@./: cxx.importable = false
 
 # Build options.
 #
