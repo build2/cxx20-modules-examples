@@ -5,4 +5,4 @@ exe{hello}: {hxx cxx}{**}
 
 hxx{*}: cxx.importable = true
 
-cxx.poptions =+ "-I$out_root" "-I$src_root"
+cxx.poptions =+ "-I$out_root" "-I$src_root" -DHELLO_BUILD

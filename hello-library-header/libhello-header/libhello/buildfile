@@ -10,8 +10,8 @@ hxx{*}: cxx.importable = true
 #
 cxx.poptions =+ "-I$out_root" "-I$src_root"
 
-obja{*}: cxx.poptions += -DLIBHELLO_STATIC_BUILD
-objs{*}: cxx.poptions += -DLIBHELLO_SHARED_BUILD
+{hbmia obja}{*}: cxx.poptions += -DLIBHELLO_STATIC_BUILD
+{hbmis objs}{*}: cxx.poptions += -DLIBHELLO_SHARED_BUILD
 
 # Export options.
 #
