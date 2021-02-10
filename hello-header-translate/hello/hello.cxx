@@ -1,6 +1,6 @@
-#include <hello/hello.hxx>
+#include <iostream> // Must come first (GCC bug 99000).
 
-#include <iostream>
+#include <hello/hello.hxx>
 
 namespace hello
 {
