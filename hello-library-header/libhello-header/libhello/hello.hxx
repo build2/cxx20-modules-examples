@@ -3,8 +3,8 @@
 #include <iosfwd>
 #include <string_view>
 
-#include <libhello/check.hxx>
-#include <libhello-format/format.hxx> // Re-export hello::format_hello
+#include <libhello/check.hxx>         // Export hello::check_hello()
+#include <libhello-format/format.hxx> // Re-export hello::format_hello()
 
 namespace hello
 {
