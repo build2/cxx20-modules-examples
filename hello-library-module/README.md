@@ -7,9 +7,14 @@ Example of a development build (in this case module BMIs are built as part of
 each library):
 
 ```
-b config.import.libhello_format_module=libhello-format-module/ \
-  config.import.libhello_module=libhello-module/ \
-  libhello-format-module/ libhello-module/ hello-library-module/
+b create: config-gcc/, cc config.cxx=g++
+cd config-gcc/
+
+b configure: ../libhello-format-module/@libhello-format-module/
+b configure: ../libhello-module/@libhello-module/
+b configure: ../hello-library-module/@hello-library-module/
+
+b hello-library-module/
 ```
 
 Example of an installed build (in this case module BMIs are built on the side

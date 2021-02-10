@@ -7,6 +7,27 @@ terminology) library.
 Example of a development build:
 
 ```
+b create: config-gcc/, cc config.cxx=g++
+cd config-gcc/
+
+b configure: ../libhello-format-header/@libhello-format-header/
+b configure: ../libhello-header/@libhello-header/
+
+b configure: ../hello-library-header-import/@hello-library-header-import/
+b hello-library-header-import/
+
+b configure: config.cxx.translate_include=all-importable \
+  ../hello-library-header-translate/@hello-library-header-translate/
+b hello-library-header-translate/
+```
+
+We could also enable the include translation for the entire configuration:
+
+```
+b create: config-gcc/, cc config.cxx=g++ config.cxx.translate_include=all-importable
+```
+
+```
 b config.import.libhello_format_header=libhello-format-header/ \
   config.import.libhello_header=libhello-header/ \
   libhello-format-header/ libhello-header/ hello-library-header-import/
