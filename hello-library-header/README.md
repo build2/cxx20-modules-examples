@@ -27,17 +27,6 @@ We could also enable the include translation for the entire configuration:
 b create: config-gcc/, cc config.cxx=g++ config.cxx.translate_include=all-importable
 ```
 
-```
-b config.import.libhello_format_header=libhello-format-header/ \
-  config.import.libhello_header=libhello-header/ \
-  libhello-format-header/ libhello-header/ hello-library-header-import/
-
-b config.import.libhello_format_header=libhello-format-header/ \
-  config.import.libhello_header=libhello-header/ \
-  config.cxx.translate_include=all-importable \
-  libhello-format-header/ libhello-header/ hello-library-header-translate/
-```
-
 Example of an installed build:
 
 ```
