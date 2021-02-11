@@ -1,5 +1,6 @@
 #include <cassert>
-#include <string> // operator==
+
+import <string>; // operator==
 
 import hello.format;
 

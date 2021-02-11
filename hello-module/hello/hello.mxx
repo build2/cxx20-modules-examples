@@ -1,12 +1,6 @@
-//export module hello;
-//
-//import <string_view>;
-
-module;
-
-#include <string_view>
-
 export module hello;
+
+import <string_view>;
 
 export namespace hello
 {

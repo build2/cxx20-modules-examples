@@ -1,6 +1,7 @@
 #include <cassert>
-#include <sstream>
-#include <stdexcept>
+
+import <sstream>;
+import <stdexcept>;
 
 import hello;
 

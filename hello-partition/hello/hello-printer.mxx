@@ -1,22 +1,12 @@
 module hello:print;
 
 import <iostream>;
-//import <string_view>;
-
-/*
-module;
-
-#include <iostream>
-#include <string_view>
-
-module hello:print;
-*/
+import <string_view>;
 
 namespace hello
 {
   void
-  //print_hello (const std::string_view& greeting)
-  print_hello (const char* greeting)
+  print_hello (const std::string_view& greeting)
   {
     std::cout << greeting << std::endl;
   }

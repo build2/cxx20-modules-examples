@@ -1,7 +1,10 @@
 #pragma once
 
-//import <string_view>;
+#if 0 // GCC bug 99051
+import <string_view>;
+#else
 #include <string_view>
+#endif
 
 namespace hello
 {
