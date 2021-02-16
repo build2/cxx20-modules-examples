@@ -1,7 +1,9 @@
 # C++20 Modules Examples
 
 This repository contains a number of examples that demonstrate various C++20
-modules features and their support in `build2`.
+modules features and their support in `build2`. For a discussion of the
+demonstrated functionality see [Complete C++20 Modules Support with
+GCC](https://build2.org/blog/build2-cxx20-modules-gcc.xhtml).
 
 [`hello-module`][hello-module]                     -- module example
 
