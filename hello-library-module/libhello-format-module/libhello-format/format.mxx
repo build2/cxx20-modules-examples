@@ -1,14 +1,12 @@
 export module hello.format;
 
 import <string>;
-/// GCC bug 98741
-///import <string_view>;
+import <string_view>;
 
 export namespace hello
 {
   std::string
-  ///format_hello (const std::string_view& n)
-  format_hello (const char* n)
+  format_hello (const std::string_view& n)
   {
     return "Hello, " + std::string (n) + '!';
   }

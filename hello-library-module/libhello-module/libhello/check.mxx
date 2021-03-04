@@ -1,14 +1,14 @@
 export module hello:check;
 
-///import <string_view>;
+import <string_view>;
 
 export namespace hello
 {
-  inline bool
-  ///check_hello (const std::string_view& name)
-  check_hello (const char* name)
+  // GCC bug 99377
+  //inline
+  bool
+  check_hello (const std::string_view& name)
   {
-    ///return !name.empty ();
-    return *name != '\0';
+    return !name.empty ();
   }
 }

@@ -1,13 +1,12 @@
 module hello;
 
 import <ostream>;
-///import <stdexcept>;
+import <stdexcept>;
 
 namespace hello
 {
   void
-  ///say_hello (std::ostream& o, const std::string_view& n)
-  say_hello (std::ostream& o, const char* n)
+  say_hello (std::ostream& o, const std::string_view& n)
   {
     if (!check_hello (n))
       throw std::invalid_argument ("invalid name");
