@@ -1,6 +1,6 @@
 #pragma once
 
-#if 0 // GCC bug 99051
+#if 0 // GCC bug 99380
 import <string_view>;
 #else
 #include <string_view>
