@@ -1,0 +1,6 @@
+import libs = libhello-utility-module%lib{hello}
+
+exe{hello}: cxx{**} $libs
+{
+  test = true
+}

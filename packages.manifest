@@ -25,3 +25,8 @@ location: hello-library-header/libhello-header/
 location: hello-library-header/hello-library-header-import/
 :
 location: hello-library-header/hello-library-header-translate/
+
+:
+location: hello-utility-library-module/libhello-utility-module/
+:
+location: hello-utility-library-module/hello-utility-library-module/

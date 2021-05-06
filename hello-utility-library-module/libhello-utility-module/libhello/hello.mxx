@@ -1,0 +1,21 @@
+export module hello;
+
+import <iosfwd>;
+import <string_view>;
+
+import <string>;
+
+export namespace hello
+{
+  void
+  say_hello (std::ostream&, const std::string_view& name);
+}
+
+// Export implementation details for testing (if you think that's ugly, then
+// you should have voted for P1203).
+//
+export namespace hello
+{
+  std::string
+  format_hello (const std::string_view&);
+}

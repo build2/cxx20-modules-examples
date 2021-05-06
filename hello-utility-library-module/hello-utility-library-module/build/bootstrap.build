@@ -1,0 +1,7 @@
+project = hello-utility-library-module
+
+using version
+using config
+using test
+using install
+using dist
