@@ -9,7 +9,7 @@ namespace hello
   say_hello (std::ostream& o, const std::string_view& n)
   {
     if (!check_hello (n))
-      throw std::invalid_argument ("invalid name");
+      throw std::invalid_argument ("empty name");
 
     // GCC bug 98760
     //o << hello::format_hello (n) << std::endl;
