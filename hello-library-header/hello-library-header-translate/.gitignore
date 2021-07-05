@@ -8,6 +8,9 @@
 *.ii.*
 *.o
 *.obj
+*.gcm
+*.pcm
+*.ifc
 *.so
 *.dll
 *.a
@@ -19,5 +22,3 @@
 *.exe.dlls/
 *.exe.manifest
 *.pc
-
-*.gcm
