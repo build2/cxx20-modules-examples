@@ -19,6 +19,8 @@ GCC](https://build2.org/blog/build2-cxx20-modules-gcc.xhtml).
 
 [`hello-utility-library-module`][hello-utility-library-module] -- module utility library example
 
+[`hello-simple`][hello-simple]                                 -- module example as `build2` simple project
+
 [hello-module]:                 https://github.com/build2/cxx20-modules-examples/tree/master/hello-module
 [hello-partition]:              https://github.com/build2/cxx20-modules-examples/tree/master/hello-partition
 [hello-header-import]:          https://github.com/build2/cxx20-modules-examples/tree/master/hello-header-import
@@ -26,10 +28,11 @@ GCC](https://build2.org/blog/build2-cxx20-modules-gcc.xhtml).
 [hello-library-module]:         https://github.com/build2/cxx20-modules-examples/tree/master/hello-library-module
 [hello-library-header]:         https://github.com/build2/cxx20-modules-examples/tree/master/hello-library-header
 [hello-utility-library-module]: https://github.com/build2/cxx20-modules-examples/tree/master/hello-utility-library-module
+[hello-simple]:                 https://github.com/build2/cxx20-modules-examples/tree/master/hello-simple
 
 While you can build each example individually (see `README` in each example
-for details), you can also build them all at once in a shared build
-configuration, for example:
+for details), you can also build them all (except for `hello-simple`) at once
+in a shared build configuration, for example:
 
 ```
 git clone https://github.com/build2/cxx20-modules-examples.git
