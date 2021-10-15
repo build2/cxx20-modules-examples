@@ -1,0 +1,160 @@
+#! /usr/bin/env bash
+
+# Run various build tests (in source, install, etc) by essentially executing
+# the commands shown in README.md files.
+#
+usage="usage: ./test c++-compiler [c++-compiler-option...]"
+
+owd=`pwd`
+trap "{ cd $owd; exit 1; }" ERR
+set -o errtrace # Trap in functions.
+
+if [ $# -eq 0 ]; then
+  echo "$usage" 1>&2
+  exit 1
+fi
+
+b=(b config.cxx=\""$*"\")
+
+set -x
+
+
+##
+##
+cd hello-simple/
+"${b[@]}"
+./hello
+"${b[@]}" clean
+cd "$owd"
+
+
+##
+##
+cd hello-module/
+"${b[@]}"
+"${b[@]}" test
+"${b[@]}" clean
+cd "$owd"
+
+
+##
+##
+cd hello-partition/
+"${b[@]}"
+"${b[@]}" test
+"${b[@]}" clean
+cd "$owd"
+
+
+
+##
+##
+cd hello-header-import/
+"${b[@]}"
+"${b[@]}" test
+"${b[@]}" clean
+cd "$owd"
+
+
+##
+##
+#ti="all-importable"
+ti="all-importable std-importable@false"
+cd hello-header-translate/
+"${b[@]}" config.cxx.translate_include="$ti"
+"${b[@]}" config.cxx.translate_include="$ti" test
+"${b[@]}" config.cxx.translate_include="$ti" clean
+cd "$owd"
+
+
+##
+##
+cd hello-library-module/
+
+"${b[@]}" create: config/, cc
+cd config/
+b configure: ../libhello-format-module/@libhello-format-module/
+b configure: ../libhello-module/@libhello-module/
+b configure: ../hello-library-module/@hello-library-module/
+b hello-library-module/
+b test: hello-library-module/
+cd ..
+rm -rf config/
+
+rm -rf /tmp/install
+"${b[@]}"                                       config.install.root=/tmp/install install: libhello-format-module/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib config.install.root=/tmp/install install: libhello-module/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib hello-library-module/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib test: hello-library-module/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib clean: hello-library-module/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib clean: libhello-module/
+"${b[@]}"                                       clean: libhello-format-module/
+rm -rf /tmp/install
+
+cd "$owd"
+
+
+##
+##
+cd hello-library-header/
+
+"${b[@]}" create: config/, cc
+cd config/
+b configure: ../libhello-format-header/@libhello-format-header/
+b configure: ../libhello-header/@libhello-header/
+b configure: ../hello-library-header-import/@hello-library-header-import/
+b hello-library-header-import/
+b test: hello-library-header-import/
+b configure: config.cxx.translate_include=all-importable \
+  ../hello-library-header-translate/@hello-library-header-translate/
+b hello-library-header-translate/
+b test: hello-library-header-translate/
+cd ..
+rm -rf config/
+
+#ti="all-importable"
+ti="all-importable std-importable@false"
+rm -rf /tmp/install
+"${b[@]}"                                       config.install.root=/tmp/install   install: libhello-format-header/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib config.install.root=/tmp/install   install: libhello-header/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                             hello-library-header-import/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                    test:    hello-library-header-import/
+#
+# @@ Unexpected module export from mapper.
+#
+#"${b[@]}" config.cc.loptions=-L/tmp/install/lib config.cxx.translate_include="$ti"          hello-library-header-translate/
+#"${b[@]}" config.cc.loptions=-L/tmp/install/lib config.cxx.translate_include="$ti" test:    hello-library-header-translate/
+#"${b[@]}" config.cc.loptions=-L/tmp/install/lib config.cxx.translate_include="$ti" clean:   hello-library-header-translate/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                    clean:   hello-library-header-import/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                    clean:   libhello-header/
+"${b[@]}"                                                                          clean:   libhello-format-header/
+rm -rf /tmp/install
+
+cd "$owd"
+
+
+##
+##
+# @@ GCC ICE
+if false; then
+cd hello-utility-library-module/
+
+"${b[@]}" create: config/, cc
+cd config/
+b configure: ../libhello-utility-module/@libhello-utility-module/
+b configure: ../hello-utility-library-module/@hello-utility-library-module/
+b hello-utility-library-module/
+b test: hello-utility-library-module/
+cd ..
+rm -rf config/
+
+rm -rf /tmp/install
+"${b[@]}"                                       config.install.root=/tmp/install install: libhello-utility-module/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                           hello-utility-library-module/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                  test:    hello-utility-library-module/
+"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                  clean:   hello-utility-library-module/
+"${b[@]}"                                                                        clean:   libhello-utility-module/
+rm -rf config/
+
+cd "$owd"
+fi
