@@ -5,6 +5,8 @@ modules features and their support in `build2`. For a discussion of the
 demonstrated functionality see [Complete C++20 Modules Support with
 GCC](https://build2.org/blog/build2-cxx20-modules-gcc.xhtml).
 
+Note: requires GCC 12 or later.
+
 [`hello-module`][hello-module]                                 -- module example
 
 [`hello-partition`][hello-partition]                           -- module partition example

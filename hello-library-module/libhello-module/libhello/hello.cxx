@@ -11,8 +11,6 @@ namespace hello
     if (!check_hello (n))
       throw std::invalid_argument ("empty name");
 
-    // GCC bug 98760
-    //o << hello::format_hello (n) << std::endl;
-    o << "Hello, " << n << "!" << std::endl;
+    o << hello::format_hello (n) << std::endl;
   }
 }
