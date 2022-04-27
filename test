@@ -14,10 +14,9 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 
-b=(b config.cxx=\""$*"\")
+b=(b "config.cxx=$*")
 
 set -x
-
 
 ##
 ##
