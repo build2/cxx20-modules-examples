@@ -16,6 +16,8 @@ fi
 
 b=(b "config.cxx=$*")
 
+#b+=(config.install.relocatable=true)
+
 set -x
 
 ##
