@@ -2,7 +2,7 @@
 
 NOTE: this `named-only` branch contains a subset of examples found in the
 `master` branch. It doesn't contain examples of header units and examples of
-the named module have been modified to `#include` instead of `import` headers.
+named modules have been modified to `#include` instead of `import` headers.
 
 This repository contains a number of examples that demonstrate various C++20
 modules features and their support in `build2`. For a discussion of the
