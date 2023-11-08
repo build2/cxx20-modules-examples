@@ -1,5 +1,12 @@
 # C++20 Modules Examples
 
+NOTE: this `master` branch contains examples of header units and uses `import`
+instead of `#include` for headers in examples of named modules. As a result,
+these examples currently can only be built with GCC. See the `named-only`
+branch for a subset of examples that only cover named modules and that have
+been modified to `#include` instead of `import` headers in order to be usable
+with other compilers (Clang, MSVC).
+
 This repository contains a number of examples that demonstrate various C++20
 modules features and their support in `build2`. For a discussion of the
 demonstrated functionality see [Complete C++20 Modules Support with
