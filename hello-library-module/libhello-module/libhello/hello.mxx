@@ -1,7 +1,9 @@
-export module hello;
+module;
 
-import <iosfwd>;
-import <string_view>;
+#include <iosfwd>
+#include <string_view>
+
+export module hello;
 
 export import :check;
 import hello.format;

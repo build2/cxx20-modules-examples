@@ -1,7 +1,9 @@
-module hello;
+module;
 
-import <ostream>;
-import <stdexcept>;
+#include <ostream>
+#include <stdexcept>
+
+module hello;
 
 namespace hello
 {

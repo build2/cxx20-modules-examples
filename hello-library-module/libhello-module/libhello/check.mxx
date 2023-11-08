@@ -1,11 +1,16 @@
-export module hello:check;
+module;
 
-import <string_view>;
+#include <string_view>
+
+export module hello:check;
 
 export namespace hello
 {
   // GCC bug 99377
-  //inline
+  //
+#if 1
+  inline
+#endif
   bool
   check_hello (const std::string_view& name)
   {

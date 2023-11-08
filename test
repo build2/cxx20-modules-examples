@@ -20,6 +20,7 @@ b=(b "config.cxx=$*")
 
 set -x
 
+
 ##
 ##
 cd hello-simple/
@@ -73,10 +74,9 @@ rm -rf /tmp/install
 
 cd "$owd"
 
+
 ##
 ##
-# @@ GCC ICE
-if false; then
 cd hello-utility-library-module/
 
 "${b[@]}" create: config/, cc
@@ -97,4 +97,3 @@ rm -rf /tmp/install
 rm -rf config/
 
 cd "$owd"
-fi

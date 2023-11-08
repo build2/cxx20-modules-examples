@@ -1,6 +1,8 @@
-module hello;
+module;
 
-import <iostream>;
+#include <iostream>
+
+module hello;
 
 namespace hello
 {

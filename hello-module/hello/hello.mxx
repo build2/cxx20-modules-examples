@@ -1,6 +1,8 @@
-export module hello;
+module;
 
-import <string_view>;
+#include <string_view>
+
+export module hello;
 
 export namespace hello
 {
