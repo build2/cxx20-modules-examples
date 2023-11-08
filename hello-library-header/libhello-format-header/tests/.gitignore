@@ -1,8 +1,0 @@
-# Test executables.
-#
-driver
-
-# Testscript output directories (can be symlinks).
-#
-test
-test-*

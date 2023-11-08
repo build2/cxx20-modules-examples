@@ -1,3 +1,0 @@
-import libs = libhello-header%lib{hello}
-
-exe{driver}: cxx{**} $libs

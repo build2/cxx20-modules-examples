@@ -1,6 +1,0 @@
-$out_root/
-{
-  include libhello-format/
-}
-
-export $out_root/libhello-format/$import.target

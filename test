@@ -47,27 +47,6 @@ cd hello-partition/
 cd "$owd"
 
 
-
-##
-##
-cd hello-header-import/
-"${b[@]}"
-"${b[@]}" test
-"${b[@]}" clean
-cd "$owd"
-
-
-##
-##
-#ti="all-importable"
-ti="all-importable std-importable@false"
-cd hello-header-translate/
-"${b[@]}" config.cxx.translate_include="$ti"
-"${b[@]}" config.cxx.translate_include="$ti" test
-"${b[@]}" config.cxx.translate_include="$ti" clean
-cd "$owd"
-
-
 ##
 ##
 cd hello-library-module/
@@ -93,46 +72,6 @@ rm -rf /tmp/install
 rm -rf /tmp/install
 
 cd "$owd"
-
-
-##
-##
-cd hello-library-header/
-
-"${b[@]}" create: config/, cc
-cd config/
-b configure: ../libhello-format-header/@libhello-format-header/
-b configure: ../libhello-header/@libhello-header/
-b configure: ../hello-library-header-import/@hello-library-header-import/
-b hello-library-header-import/
-b test: hello-library-header-import/
-b configure: config.cxx.translate_include=all-importable \
-  ../hello-library-header-translate/@hello-library-header-translate/
-b hello-library-header-translate/
-b test: hello-library-header-translate/
-cd ..
-rm -rf config/
-
-#ti="all-importable"
-ti="all-importable std-importable@false"
-rm -rf /tmp/install
-"${b[@]}"                                       config.install.root=/tmp/install   install: libhello-format-header/
-"${b[@]}" config.cc.loptions=-L/tmp/install/lib config.install.root=/tmp/install   install: libhello-header/
-"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                             hello-library-header-import/
-"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                    test:    hello-library-header-import/
-#
-# @@ Unexpected module export from mapper.
-#
-#"${b[@]}" config.cc.loptions=-L/tmp/install/lib config.cxx.translate_include="$ti"          hello-library-header-translate/
-#"${b[@]}" config.cc.loptions=-L/tmp/install/lib config.cxx.translate_include="$ti" test:    hello-library-header-translate/
-#"${b[@]}" config.cc.loptions=-L/tmp/install/lib config.cxx.translate_include="$ti" clean:   hello-library-header-translate/
-"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                    clean:   hello-library-header-import/
-"${b[@]}" config.cc.loptions=-L/tmp/install/lib                                    clean:   libhello-header/
-"${b[@]}"                                                                          clean:   libhello-format-header/
-rm -rf /tmp/install
-
-cd "$owd"
-
 
 ##
 ##

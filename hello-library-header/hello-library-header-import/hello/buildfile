@@ -1,6 +1,0 @@
-import libs = libhello-header%lib{hello}
-
-exe{hello}: cxx{**} $libs
-{
-  test = true
-}

@@ -1,6 +1,0 @@
-$out_root/
-{
-  include libhello/
-}
-
-export $out_root/libhello/$import.target

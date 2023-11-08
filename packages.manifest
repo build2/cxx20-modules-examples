@@ -5,26 +5,11 @@ location: hello-module/
 location: hello-partition/
 
 :
-location: hello-header-import/
-
-:
-location: hello-header-translate/
-
-:
 location: hello-library-module/libhello-format-module/
 :
 location: hello-library-module/libhello-module/
 :
 location: hello-library-module/hello-library-module/
-
-:
-location: hello-library-header/libhello-format-header/
-:
-location: hello-library-header/libhello-header/
-:
-location: hello-library-header/hello-library-header-import/
-:
-location: hello-library-header/hello-library-header-translate/
 
 :
 location: hello-utility-library-module/libhello-utility-module/

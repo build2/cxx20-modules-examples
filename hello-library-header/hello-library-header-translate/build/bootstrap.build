@@ -1,7 +1,0 @@
-project = hello-library-header-translate
-
-using version
-using config
-using test
-using install
-using dist
