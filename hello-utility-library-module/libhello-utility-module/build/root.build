@@ -1,5 +1,6 @@
 cxx.std = experimental
 cxx.features.modules = true
+cxx.features.symexport = true
 
 using cxx
 
