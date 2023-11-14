@@ -9,8 +9,7 @@ export module hello;
 
 export namespace hello
 {
-  __symexport
-  void
+  __symexport void
   say_hello (std::ostream&, const std::string_view& name);
 }
 
@@ -19,7 +18,6 @@ export namespace hello
 //
 export namespace hello
 {
-  __symexport
-  std::string
+  __symexport std::string
   format_hello (const std::string_view&);
 }

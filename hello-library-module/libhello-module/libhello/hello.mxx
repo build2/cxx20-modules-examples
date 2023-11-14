@@ -10,9 +10,11 @@ import hello.format;
 
 export namespace hello
 {
-  __symexport
-  void
+  __symexport void
   say_hello (std::ostream&, const std::string_view& name);
 
-  using hello::format_hello; // Re-export.
+  // Re-export.
+  //
+  using hello::greeting;
+  using hello::format_hello;
 }

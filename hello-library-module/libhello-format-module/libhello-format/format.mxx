@@ -7,10 +7,11 @@ export module hello.format;
 
 export namespace hello
 {
-  __symexport
-  std::string
-  format_hello (const std::string_view& n)
+  __symexport std::string greeting = "Hello";
+
+  __symexport std::string
+  format_hello (const std::string_view& name)
   {
-    return "Hello, " + std::string (n) + '!';
+    return greeting + ", " + std::string (name) + '!';
   }
 }
