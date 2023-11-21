@@ -1,9 +1,9 @@
 # C++20 Modules Examples
 
-NOTE: this `named-only-import-std` branch contains a subset of examples
-found in the `master` branch. It doesn't contain examples of header units
-and examples of named modules have been modified to `import std` instead
-of `import` headers (see also `named-only` branch which rather `#include`s
+NOTE: this `named-only-import-std` branch contains a subset of examples found
+in the `master` branch. It doesn't contain examples of header units and
+examples of named modules have been modified to `import std` instead of
+`import` headers (see also the `named-only` branch which rather `#include`s
 headers).
 
 This repository contains a number of examples that demonstrate various C++20
