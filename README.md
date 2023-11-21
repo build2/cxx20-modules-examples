@@ -2,7 +2,8 @@
 
 NOTE: this `named-only` branch contains a subset of examples found in the
 `master` branch. It doesn't contain examples of header units and examples of
-named modules have been modified to `#include` instead of `import` headers.
+named modules have been modified to `#include` instead of `import` headers
+(see also the `named-only-import-std` branch which rather does `import std`).
 
 This repository contains a number of examples that demonstrate various C++20
 modules features and their support in `build2`. For a discussion of the
@@ -34,6 +35,7 @@ in a shared build configuration, for example:
 ```
 git clone https://github.com/build2/cxx20-modules-examples.git
 cd cxx20-modules-examples
+git checkout named-only
 
 bdep init -C @clang cc config.cxx=clang++
 bdep update @clang
