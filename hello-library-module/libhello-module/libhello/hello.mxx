@@ -1,12 +1,8 @@
-module;
-
-#include <iosfwd>
-#include <string_view>
-
 export module hello;
 
-export import :check;
+import std;
 import hello.format;
+export import :check;
 
 export namespace hello
 {

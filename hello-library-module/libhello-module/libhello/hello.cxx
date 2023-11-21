@@ -1,8 +1,3 @@
-module;
-
-#include <ostream>
-#include <stdexcept>
-
 module hello;
 
 namespace hello

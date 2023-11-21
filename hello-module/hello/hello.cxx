@@ -1,7 +1,3 @@
-module;
-
-#include <iostream>
-
 module hello;
 
 namespace hello

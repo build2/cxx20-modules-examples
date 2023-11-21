@@ -1,7 +1,3 @@
-module;
-
-#include <string_view> // Have to re-include (unlike import).
-
 module hello;
 
 import :print;

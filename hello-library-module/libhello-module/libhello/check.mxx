@@ -1,8 +1,6 @@
-module;
-
-#include <string_view>
-
 export module hello:check;
+
+import std;
 
 export namespace hello
 {

@@ -1,15 +1,17 @@
 # C++20 Modules Examples
 
-NOTE: this `named-only` branch contains a subset of examples found in the
-`master` branch. It doesn't contain examples of header units and examples of
-named modules have been modified to `#include` instead of `import` headers.
+NOTE: this `named-only-import-std` branch contains a subset of examples
+found in the `master` branch. It doesn't contain examples of header units
+and examples of named modules have been modified to `import std` instead
+of `import` headers (see also `named-only` branch which rather `#include`s
+headers).
 
 This repository contains a number of examples that demonstrate various C++20
 modules features and their support in `build2`. For a discussion of the
 demonstrated functionality see [Complete C++20 Modules Support with
 GCC](https://build2.org/blog/build2-cxx20-modules-gcc.xhtml).
 
-Note: requires GCC 12 (or later) or Clang 16 (or later).
+Note: requires Clang 17 (or later) with `libc++`.
 
 [`hello-module`][hello-module]                                 -- module example
 
@@ -34,7 +36,8 @@ in a shared build configuration, for example:
 ```
 git clone https://github.com/build2/cxx20-modules-examples.git
 cd cxx20-modules-examples
+git checkout named-only-import-std
 
-bdep init -C @clang cc config.cxx=clang++
+bdep init -C @clang cc config.cxx='clang++ -stdlib=libc++'
 bdep update @clang
 ```

@@ -1,9 +1,6 @@
-module;
-
-#include <iostream>
-#include <string_view>
-
 module hello:print;
+
+import std;
 
 namespace hello
 {

@@ -1,9 +1,6 @@
-module;
-
-#include <string_view>
-#include <iostream>
-
 export module hello;
+
+import std;
 
 export namespace hello
 {

@@ -1,9 +1,6 @@
-module;
-
-#include <string>
-#include <string_view>
-
 export module hello:format;
+
+import std;
 
 export namespace hello
 {

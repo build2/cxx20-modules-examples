@@ -1,11 +1,6 @@
-module;
-
-#include <iosfwd>
-#include <string_view>
-
-#include <string>
-
 export module hello;
+
+import std;
 
 export namespace hello
 {

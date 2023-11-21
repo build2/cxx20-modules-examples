@@ -1,7 +1,6 @@
 #include <cassert>
 
-#include <string> // operator==
-
+import std; // operator==
 import hello;
 
 int
