@@ -1,0 +1,9 @@
+module hello:flags;
+
+namespace hello
+{
+  enum class flags
+  {
+    none
+  };
+}

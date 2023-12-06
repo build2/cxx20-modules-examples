@@ -2,9 +2,18 @@ export module hello;
 
 import std;
 export import :format;
+import :flags;
 
 export namespace hello
 {
+  struct properties
+  {
+    properties (): flags_ (flags::none) {}
+
+  private:
+    flags flags_;
+  };
+
   void
-  say_hello (const std::string_view& name);
+  say_hello (const std::string_view& name, const properties& = {});
 }
