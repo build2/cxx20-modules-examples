@@ -11,7 +11,7 @@ modules features and their support in `build2`. For a discussion of the
 demonstrated functionality see [Complete C++20 Modules Support with
 GCC](https://build2.org/blog/build2-cxx20-modules-gcc.xhtml).
 
-Note: requires Clang 17 (or later) with `libc++`.
+Note: requires MSVC 17.6 (or later) or Clang 17 (or later) with `libc++`.
 
 [`hello-module`][hello-module]                                 -- module example
 
@@ -40,4 +40,7 @@ git checkout named-only-import-std
 
 bdep init -C @clang cc config.cxx='clang++ -stdlib=libc++'
 bdep update @clang
+
+bdep init -C @msvc cc config.cxx=cl
+bdep update @msvc
 ```
