@@ -155,7 +155,7 @@ rm -rf /tmp/install
 "${b[@]}" config.cc.loptions=-L/tmp/install/lib                                  test:    hello-utility-library-module/
 "${b[@]}" config.cc.loptions=-L/tmp/install/lib                                  clean:   hello-utility-library-module/
 "${b[@]}"                                                                        clean:   libhello-utility-module/
-rm -rf config/
+rm -rf /tmp/install
 
 cd "$owd"
 fi
