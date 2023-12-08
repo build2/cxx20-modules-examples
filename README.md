@@ -10,7 +10,7 @@ modules features and their support in `build2`. For a discussion of the
 demonstrated functionality see [Complete C++20 Modules Support with
 GCC](https://build2.org/blog/build2-cxx20-modules-gcc.xhtml).
 
-Note: requires GCC 12 (or later) or Clang 16 (or later).
+Note: requires GCC 12 (or later), Clang 16 (or later), or MSVC 17.6 (or later).
 
 [`hello-module`][hello-module]                                 -- module example
 
@@ -39,4 +39,7 @@ git checkout named-only
 
 bdep init -C @clang cc config.cxx=clang++
 bdep update @clang
+
+bdep init -C @msvc cc config.cxx=cl
+bdep update @msvc
 ```
