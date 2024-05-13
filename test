@@ -47,7 +47,6 @@ cd hello-partition/
 cd "$owd"
 
 
-
 ##
 ##
 cd hello-header-import/
@@ -136,7 +135,7 @@ cd "$owd"
 
 ##
 ##
-# @@ GCC ICE
+# @@ GCC ICE, bug 115062.
 if false; then
 cd hello-utility-library-module/
 

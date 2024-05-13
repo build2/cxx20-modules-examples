@@ -4,8 +4,10 @@ import <string_view>;
 
 export namespace hello
 {
-  // GCC bug 99377
-  //inline
+  // GCC bug 99377, fixed in 14.
+#if !defined(__GNUC__) || __GNUC__ >= 14
+  inline
+#endif
   bool
   check_hello (const std::string_view& name)
   {
