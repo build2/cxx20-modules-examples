@@ -1,4 +1,4 @@
-cxx.std = experimental
+cxx.std = latest
 cxx.features.modules = true
 cxx.features.symexport = true
 
