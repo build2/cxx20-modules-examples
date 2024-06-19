@@ -6,13 +6,13 @@ import <stdexcept>;
 namespace hello
 {
   std::string
-  format_hello (const std::string_view& n)
+  format_hello (std::string_view n)
   {
     return "Hello, " + std::string (n) + "!";
   }
 
   void
-  say_hello (std::ostream& o, const std::string_view& n)
+  say_hello (std::ostream& o, std::string_view n)
   {
     if (n.empty ())
       throw std::invalid_argument ("empty name");

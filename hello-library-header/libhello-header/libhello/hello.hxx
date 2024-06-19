@@ -9,7 +9,7 @@
 namespace hello
 {
   void
-  say_hello (std::ostream&, const std::string_view& name);
+  say_hello (std::ostream&, std::string_view name);
 }
 
 // Sanity check: make sure this header is built with correct options.

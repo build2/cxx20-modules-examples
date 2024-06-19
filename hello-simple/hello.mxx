@@ -6,7 +6,7 @@ import <iostream>;
 export namespace hello
 {
   void
-  say_hello (const std::string_view& name)
+  say_hello (std::string_view name)
   {
     std::cout << "Hello, " << name << '!' << std::endl;
   }

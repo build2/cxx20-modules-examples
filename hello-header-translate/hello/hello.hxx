@@ -5,7 +5,7 @@
 namespace hello
 {
   void
-  say_hello (const std::string_view& name);
+  say_hello (std::string_view name);
 }
 
 // Sanity check: make sure this header is built with correct options.
