@@ -5,7 +5,7 @@ import std;
 export namespace hello
 {
   std::string
-  format_hello (const std::string_view& name)
+  format_hello (std::string_view name)
   {
     return "Hello, " + std::string (name) + '!';
   }

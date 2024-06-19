@@ -5,7 +5,7 @@ import :print;
 namespace hello
 {
   void
-  say_hello (const std::string_view& n, const properties&)
+  say_hello (std::string_view n, const properties&)
   {
     print_hello (format_hello (n));
   }

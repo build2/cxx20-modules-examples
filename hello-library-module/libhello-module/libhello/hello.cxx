@@ -3,7 +3,7 @@ module hello;
 namespace hello
 {
   void
-  say_hello (std::ostream& o, const std::string_view& n)
+  say_hello (std::ostream& o, std::string_view n)
   {
     if (!check_hello (n))
       throw std::invalid_argument ("empty name");

@@ -15,5 +15,5 @@ export namespace hello
   };
 
   void
-  say_hello (const std::string_view& name, const properties& = {});
+  say_hello (std::string_view name, const properties& = {});
 }
