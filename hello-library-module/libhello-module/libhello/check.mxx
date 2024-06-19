@@ -4,11 +4,7 @@ import std;
 
 export namespace hello
 {
-  // GCC bug 99377
-  //
-#if 1
   inline
-#endif
   bool
   check_hello (std::string_view name)
   {
