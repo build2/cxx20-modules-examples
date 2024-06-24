@@ -5,8 +5,5 @@ import std;
 export namespace hello
 {
   std::string
-  format_hello (std::string_view name)
-  {
-    return "Hello, " + std::string (name) + '!';
-  }
+  format_hello (std::string_view name);
 }

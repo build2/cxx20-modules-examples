@@ -5,8 +5,5 @@ import std;
 namespace hello
 {
   void
-  print_hello (std::string_view greeting)
-  {
-    std::cout << greeting << std::endl;
-  }
+  print_hello (std::string_view greeting);
 }
