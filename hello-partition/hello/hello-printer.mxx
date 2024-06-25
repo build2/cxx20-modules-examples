@@ -4,6 +4,8 @@ import std;
 
 namespace hello
 {
+  enum class print_flags {none, newline};
+
   void
-  print_hello (std::string_view greeting);
+  print_hello (std::string_view greeting, print_flags = print_flags::newline);
 }

@@ -7,8 +7,11 @@ import :print;
 namespace hello
 {
   void
-  print_hello (std::string_view g)
+  print_hello (std::string_view g, print_flags f)
   {
-    std::cout << g << std::endl;
+    std::cout << g;
+
+    if (f == print_flags::newline)
+      std::cout << std::endl;
   }
 }
