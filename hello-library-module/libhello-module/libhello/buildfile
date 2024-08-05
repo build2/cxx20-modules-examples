@@ -6,8 +6,6 @@ lib{hello}: {mxx cxx}{**} $impl_libs $intf_libs
 
 # Build options.
 #
-{bmia obja}{*}: cxx.poptions += -DLIBHELLO_STATIC_BUILD
-{bmis objs}{*}: cxx.poptions += -DLIBHELLO_SHARED_BUILD
 
 # Export options.
 #
