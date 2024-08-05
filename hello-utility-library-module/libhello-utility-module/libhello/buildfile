@@ -22,8 +22,6 @@ for t: cxx{**.test...}
 
 # Build options.
 #
-{bmia obja}{*}: cxx.poptions += -DLIBHELLO_STATIC_BUILD
-{bmis objs}{*}: cxx.poptions += -DLIBHELLO_SHARED_BUILD
 
 # Export options.
 #
