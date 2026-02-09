@@ -135,8 +135,8 @@ cd "$owd"
 
 ##
 ##
-# @@ GCC ICE, bug 115062.
-if false; then
+# @@ GCC ICE, bug 115062, fixed in GCC 15.
+if true; then
 cd hello-utility-library-module/
 
 "${b[@]}" create: config/, cc

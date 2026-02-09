@@ -1,4 +1,4 @@
-#include <iostream> // Must come first (GCC bug 99000).
+#include <iostream> // Must come first (GCC bug 99000, fixed in GCC 15).
 
 #include <hello/hello.hxx>
 
